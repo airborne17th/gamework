@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="background">
+        <table id="bg-table">
+          <tr>
+            <th class="board" id="39" type="inn">Inn</th>
+            <th class="board" id="40">Spring</th>
+            <th class="board" id="41">Statue</th>
+            <th class="board" id="42">Visitor</th>
+            <th class="board" id="43">Souvenir</th>
+            <th class="board" id="44">Lake</th>
+            <th class="board" id="45">Mora</th>
+            <th class="board" id="46">Lake</th>
+            <th class="board" id="47">Visitor</th>
+            <th class="board" id="48">Mountain</th>
+            <th class="board" id="49">Field</th>
+            <th class="board" id="50">Lake</th>
+            <th class="board" id="51">Souvenir</th>
+            <th class="board" id="52" type="end">End</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th></th>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th class="board" id="25" type="inn">Inn</th>
+            <th class="board" id="26">Field</th>
+            <th class="board" id="27">Souvenir</th>
+            <th class="board" id="28">Visitor</th>
+            <th class="board" id="29">Mora</th>
+            <th class="board" id="30">Mountain</th>
+            <th class="board" id="31">Spring</th>
+            <th class="board" id="32">Lake</th>
+            <th class="board" id="33">Field</th>
+            <th class="board" id="34">Statue</th>
+            <th class="board" id="35">Mora</th>
+            <th class="board" id="36">Visitor</th>
+            <th class="board" id="37">Sea</th>
+            <th class="board" id="38">Souvenir</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th></th>
+            <th></th>
+            <th>O</th>
+          </tr>
+          <tr>
+            <th class="board" id="15" type="inn">Inn</th>
+            <th class="board" id="16">Lake</th>
+            <th class="board" id="17">Statue</th>
+            <th class="board" id="18">Mora</th>
+            <th class="board" id="19">Field</th>
+            <th class="board" id="20">Mountain</th>
+            <th class="board" id="21">Visitor</th>
+            <th class="board" id="22">Statue</th>
+            <th class="board" id="23">Spring</th>
+            <th class="board" id="24">Mountain</th>
+            <th class="board" id="22">Lake</th>
+            <th class="board" id="23">Souvenir</th>
+            <th class="board" id="24">Mora</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th class="board" id="1" type="start">Start</th>
+            <th class="board" id="2">Souvenir</th>
+            <th class="board" id="3">Statue</th>
+            <th class="board" id="4">Visitor</th>
+            <th class="board" id="5">Field</th>
+            <th class="board" id="6">Spring</th>
+            <th class="board" id="7">Mountain</th>
+            <th class="board" id="8">Coin</th>
+            <th class="board" id="9">Souvenir</th>
+            <th class="board" id="10">Statue</th>
+            <th class="board" id="11">Visitor</th>
+            <th class="board" id="12">Lake</th>
+            <th class="board" id="13">Mountain</th>
+            <th class="board" id="14">Spring</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>O</th>
+            <th>O</th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th>O</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </table>
+        </div>
+</body>
+<script src="script.js"></script>
+</html>

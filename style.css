@@ -1,0 +1,10 @@
+/* table { 
+    width: 540px; 
+    height: 540px;
+  } */
+  
+.board{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
