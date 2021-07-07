@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <title>Document</title>
+    <title>Genshin Tokaido</title>
 </head>
 <body>
+    <div id="select_player_count">
+      <h2>Select Number of Players</h2>
+      <button id="P3" onclick="playerCountSelection(3)">Three</button> 
+      <button id="P4" onclick="playerCountSelection(4)">Four</button> 
+      <button id="P5" onclick="playerCountSelection(5)">Five</button> 
+    </div>
+    <div>
+      <p id="player_order_display"></p>
+    </div>
     <div id="background">
         <table id="bg-table">
           <tr>
@@ -61,7 +70,7 @@
           </tr>
           <tr>
             <th class="board" id="25" type="inn">Inn</th>
-            <th class="board" id="26">Field</th>
+            <th class="board" id="26" type="field">Field</th>
             <th class="board" id="27">Souvenir</th>
             <th class="board" id="28">Visitor</th>
             <th class="board" id="29">Mora</th>

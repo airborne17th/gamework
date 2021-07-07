@@ -2,9 +2,13 @@
     width: 540px; 
     height: 540px;
   } */
-  
-.board{
-    border: 2px;
-    border-style: solid;
-    border-color: black;
+
+.board {
+  border: 2px;
+  border-style: solid;
+  border-color: black;
 }
+
+/* .select_player_count {
+  visibility: "visible";
+} */
