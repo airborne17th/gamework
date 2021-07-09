@@ -9,11 +9,25 @@
     <title>Genshin Tokaido</title>
 </head>
 <body>
-    <div id="select_player_count">
-      <h2>Select Number of Players</h2>
-      <button id="P3" onclick="playerCountSelection(3)">Three</button> 
-      <button id="P4" onclick="playerCountSelection(4)">Four</button> 
-      <button id="P5" onclick="playerCountSelection(5)">Five</button> 
+
+    <div id="player_color_display">
+      <p>
+        <span id="player1_color">Player 1</span>
+        <span id="player2_color">Player 2</span>
+        <span id="player3_color">Player 3</span>
+        <span id="player4_color">Player 4</span>
+        <span id="player5_color">Player 5</span>
+      </p>
+    </div>
+    <div id="player_card_display">
+      <span id="player1_card">Player 1</span>
+      <span id="player2_card">Player 2</span>
+      <span id="player3_card">Player 3</span>
+      <!-- <span id="player4_card">Player 4</span>
+      <span id="player5_card">Player 5</span> -->
+    </div>
+    <div id="player_error">
+
     </div>
     <div>
       <p id="player_order_display"></p>
@@ -21,20 +35,20 @@
     <div id="background">
         <table id="bg-table">
           <tr>
-            <th class="board" id="39" type="inn">Inn</th>
-            <th class="board" id="40">Spring</th>
-            <th class="board" id="41">Statue</th>
-            <th class="board" id="42">Visitor</th>
-            <th class="board" id="43">Souvenir</th>
-            <th class="board" id="44">Lake</th>
-            <th class="board" id="45">Mora</th>
-            <th class="board" id="46">Lake</th>
-            <th class="board" id="47">Visitor</th>
-            <th class="board" id="48">Mountain</th>
-            <th class="board" id="49">Field</th>
-            <th class="board" id="50">Lake</th>
-            <th class="board" id="51">Souvenir</th>
-            <th class="board" id="52" type="end">End</th>
+            <th class="board" id="39" type="Inn">Inn</th>
+            <th class="board" id="40" type="Cafe">Cafe</th>
+            <th class="board" id="41" type="Statue">Statue</th>
+            <th class="board" id="42" type="Visitor">Visitor</th>
+            <th class="board" id="43" type="Souvenir">Souvenir</th>
+            <th class="board" id="44" type="Lake">Lake</th>
+            <th class="board" id="45" type="Mora">Mora</th>
+            <th class="board" id="46" type="Lake">Lake</th>
+            <th class="board" id="47" type="Visitor">Visitor</th>
+            <th class="board" id="48" type="Mountain">Mountain</th>
+            <th class="board" id="49" type="Field">Field</th>
+            <th class="board" id="50" type="Lake">Lake</th>
+            <th class="board" id="51" type="Souvenir">Souvenir</th>
+            <th class="board" id="52" type="End">End</th>
           </tr>
           <tr>
             <th></th>
@@ -69,20 +83,20 @@
             <th></th>
           </tr>
           <tr>
-            <th class="board" id="25" type="inn">Inn</th>
-            <th class="board" id="26" type="field">Field</th>
-            <th class="board" id="27">Souvenir</th>
-            <th class="board" id="28">Visitor</th>
-            <th class="board" id="29">Mora</th>
-            <th class="board" id="30">Mountain</th>
-            <th class="board" id="31">Spring</th>
-            <th class="board" id="32">Lake</th>
-            <th class="board" id="33">Field</th>
-            <th class="board" id="34">Statue</th>
-            <th class="board" id="35">Mora</th>
-            <th class="board" id="36">Visitor</th>
-            <th class="board" id="37">Sea</th>
-            <th class="board" id="38">Souvenir</th>
+            <th class="board" id="25" type="Inn">Inn</th>
+            <th class="board" id="26" type="Field">Field</th>
+            <th class="board" id="27" type="Souvenir">Souvenir</th>
+            <th class="board" id="28" type="Visitor">Visitor</th>
+            <th class="board" id="29" type="Mora">Mora</th>
+            <th class="board" id="30" type="Mountain">Mountain</th>
+            <th class="board" id="31" type="Cafe">Cafe</th>
+            <th class="board" id="32" type="Lake">Lake</th>
+            <th class="board" id="33" type="Field">Field</th>
+            <th class="board" id="34" type="Statue">Statue</th>
+            <th class="board" id="35" type="Mora">Mora</th>
+            <th class="board" id="36" type="Visitor">Visitor</th>
+            <th class="board" id="37" type="Lake">Lake</th>
+            <th class="board" id="38" type="Souvenir">Souvenir</th>
           </tr>
           <tr>
             <th></th>
@@ -117,19 +131,19 @@
             <th>O</th>
           </tr>
           <tr>
-            <th class="board" id="15" type="inn">Inn</th>
-            <th class="board" id="16">Lake</th>
-            <th class="board" id="17">Statue</th>
-            <th class="board" id="18">Mora</th>
-            <th class="board" id="19">Field</th>
-            <th class="board" id="20">Mountain</th>
-            <th class="board" id="21">Visitor</th>
-            <th class="board" id="22">Statue</th>
-            <th class="board" id="23">Spring</th>
-            <th class="board" id="24">Mountain</th>
-            <th class="board" id="22">Lake</th>
-            <th class="board" id="23">Souvenir</th>
-            <th class="board" id="24">Mora</th>
+            <th class="board" id="15" type="Inn">Inn</th>
+            <th class="board" id="16" type="Lake">Lake</th>
+            <th class="board" id="17" type="Statue">Statue</th>
+            <th class="board" id="18" type="Mora">Mora</th>
+            <th class="board" id="19" type="Field">Field</th>
+            <th class="board" id="20" type="Mountain">Mountain</th>
+            <th class="board" id="21" type="Visitor">Visitor</th>
+            <th class="board" id="22" type="Statue">Statue</th>
+            <th class="board" id="23" type="Cafe">Cafe</th>
+            <th class="board" id="24" type="Mountain">Mountain</th>
+            <th class="board" id="22" type="Lake">Lake</th>
+            <th class="board" id="23" type="Souvenir">Souvenir</th>
+            <th class="board" id="24" type="Mora">Mora</th>
           </tr>
           <tr>
             <th></th>
@@ -163,19 +177,19 @@
           </tr>
           <tr>
             <th class="board" id="1" type="start">Start</th>
-            <th class="board" id="2">Souvenir</th>
-            <th class="board" id="3">Statue</th>
-            <th class="board" id="4">Visitor</th>
-            <th class="board" id="5">Field</th>
-            <th class="board" id="6">Spring</th>
-            <th class="board" id="7">Mountain</th>
-            <th class="board" id="8">Coin</th>
-            <th class="board" id="9">Souvenir</th>
-            <th class="board" id="10">Statue</th>
-            <th class="board" id="11">Visitor</th>
-            <th class="board" id="12">Lake</th>
-            <th class="board" id="13">Mountain</th>
-            <th class="board" id="14">Spring</th>
+            <th class="board" id="2" type="Souvenir">Souvenir</th>
+            <th class="board" id="3" type="Statue">Statue</th>
+            <th class="board" id="4" type="Visitor">Visitor</th>
+            <th class="board" id="5" type="Field">Field</th>
+            <th class="board" id="6" type="Cafe">Cafe</th>
+            <th class="board" id="7" type="Mountain">Mountain</th>
+            <th class="board" id="8" type="Mora">Mora</th>
+            <th class="board" id="9" type="Souvenir">Souvenir</th>
+            <th class="board" id="10" type="Statue">Statue</th>
+            <th class="board" id="11" type="Visitor">Visitor</th>
+            <th class="board" id="12" type="Lake">Lake</th>
+            <th class="board" id="13" type="Mountain">Mountain</th>
+            <th class="board" id="14" type="Cafe">Cafe</th>
           </tr>
           <tr>
             <th></th>
@@ -210,6 +224,9 @@
             <th></th>
           </tr>
         </table>
+        </div>
+        <div id="displayCards">
+
         </div>
 </body>
 <script src="script.js"></script>

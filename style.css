@@ -1,3 +1,6 @@
+body{
+  align-content: center;
+}
 /* table { 
     width: 540px; 
     height: 540px;
@@ -7,8 +10,59 @@
   border: 2px;
   border-style: solid;
   border-color: black;
+  background-color: white;
 }
 
-/* .select_player_count {
-  visibility: "visible";
-} */
+#select_player_count {
+  visibility: hidden;
+} 
+
+#player_error{
+  color: red;
+}
+
+#player1_color{
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background-color: cyan;
+  font-weight: bold;
+}
+
+#player2_color{
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background-color: red;
+  font-weight: bold;
+}
+
+#player3_color{
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background-color: green;
+  font-weight: bold;
+}
+
+#player4_color{
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background-color: purple;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#player5_color{
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background-color: pink;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#background{
+  background-image: url("/img/mondstadt_bg.jpg");
+}

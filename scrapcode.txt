@@ -1,0 +1,71 @@
+// let player5["space"], player5["space"], player5["space"], player5["space"], player5["space"] = 0;
+// let activeplayer_space = 0; 
+// let activeplayer;
+  console.log(activeplayer);
+  let playSpace = [player1["space"], player2["space"], player3["space"]];
+  let min = Math.min(...playersArray["space"])
+  // console.log(playSpace, last_space);
+
+  let capacityArray = [5, 2, 1, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 5, 1, 1, 2, 2, 2, 2, 1, 2, 1, 2, 1, 1, 5, 1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 5, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 1, 5];
+let occupiedArray = [];
+
+    switch(activeplayer["player_value"]){
+      case 0:
+        currentPlayerSpace = num;
+        break;
+      case 1:
+        currentPlayerSpace = num;
+        break;
+      case 2:
+        currentPlayerSpace = num;
+        break;
+      case 3:
+        currentPlayerSpace = num;
+          break;
+      case 4:
+        currentPlayerSpace = num;
+        break;  
+      default:
+        // code block
+      }
+
+          if (occupiedArray[num] >= capacityArray[num]){
+      console.log("Occupied!");
+    }
+      let currentPlayerSpace = parseInt(num);
+  if(currentPlayerSpace > startpoint){
+    if (activeplayer["space"] < currentPlayerSpace){
+      console.log("Cannot be chosen!");
+    }
+  }
+    switch(activeplayer["player_value"]){
+      case 0:
+        player1["space"] = currentPlayerSpace;
+        break;
+      case 1:
+        player2["space"] = currentPlayerSpace;
+        break;
+      case 2:
+        player3["space"] = currentPlayerSpace;
+        break;
+      case 3:
+        player4["space"] = currentPlayerSpace;
+          break;
+      case 4:
+        player5["space"] = currentPlayerSpace;
+        break;  
+      default:
+        // code block
+      }
+      console.log("P1: " + player1["space"] + " P2: " + player2["space"] + " P3: " + player3["space"] + " P4: " + player4["space"] + " P5: " + player5["space"]) 
+
+          <div id="select_player_count">
+      <h2>Select Number of Players</h2>
+      <button id="P3" onclick="playerCountSelection(3)">Three</button> 
+      <button id="P4" onclick="playerCountSelection(4)">Four</button> 
+      <button id="P5" onclick="playerCountSelection(5)">Five</button> 
+    </div>
+    <br />
+
+let space = potentialSpace - 1;
+let event = spaceTypeArray[space];
