@@ -47,7 +47,21 @@ let charArray = [
     "num": 2,
     "img": "./img/thumb/Character_Albedo_Thumb.png"
   },
-
+  {
+    "name": "Klee",
+    "num": 3,
+    "img": "./img/thumb/Character_Klee_Thumb.png"
+  },
+  {
+    "name": "Diluc",
+    "num": 4,
+    "img": "./img/thumb/Character_Diluc_Thumb.png"
+  },
+  {
+    "name": "Barbara",
+    "num": 5,
+    "img": "./img/thumb/Character_Barbara_Thumb.png"
+  }
 ]
 
 
