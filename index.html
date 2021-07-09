@@ -9,25 +9,133 @@
     <title>Genshin Tokaido</title>
 </head>
 <body>
-
-    <div id="player_color_display">
-      <p>
-        <span id="player1_color">Player 1</span>
-        <span id="player2_color">Player 2</span>
-        <span id="player3_color">Player 3</span>
-        <span id="player4_color">Player 4</span>
-        <span id="player5_color">Player 5</span>
-      </p>
+    <div id="char_card_display">
+      <table>
+        <tr>
+          <th class="char-card" id="Albedo">
+            <img src="img/char/albedo.png" alt="Albedo" height="320" width="180"></img>
+          </th>
+          <th class="char-card" id="Mona">
+            <img src="img/char/mona.jpg" alt="Mona" height="320" width="180"></img>
+          </th>
+          <th class="char-card" id="Diluc">
+            <img src="img/char/diluc.jpg" alt="Diluc" height="320" width="180"></img>
+          </th>
+          <th class="char-card" id="Klee">
+            <img src="img/char/klee.jpg" alt="Klee" height="320" width="180"></img>
+          </th>
+          <th class="char-card" id="Barbara">
+            <img src="img/char/barbara.jpg" alt="Barbara" height="320" width="180"></img>
+          </th>
+          <th class="char-card" id="Aether">
+            <img src="img/char/aether.jpg" alt="Aether" height="320" width="180"></img>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <h3>Albedo</h3>
+            <p>Starting Mora: 5</p>
+          </th>
+          <th>
+            <h3>Mona</h3>
+            <p>Starting Mora: 5</p>
+          </th>
+          <th>
+            <h3>Diluc</h3>
+            <p>Starting Mora: 6</p>
+          </th>
+          <th>
+            <h3>Klee</h3>
+            <p>Starting Mora: 2</p>
+          </th>
+          <th>
+            <h3>Barbara</h3>
+            <p>Starting Mora: 8</p>
+          </th>
+          <th>
+            <h3>Aether</h3>
+            <p>Starting Mora: 4</p>
+          </th>
+        </tr>
+        <tr>
+          <th>
+          <p id="char_desc">
+            When Albedo arrives at each of the three intermediate Inns,
+            before the Meal he takes one Panorama card of his choice, 
+            scoring the points for this card immediately.
+          </p>
+          </th>
+          <th>
+          <p id="char_desc">
+            Mona earns one point and one Mora for each
+            Encounter before the effects of the drawn
+            Encounter card are applied  
+          </p>
+          </th>
+          <th>
+            <p id="char_desc">
+              Diluc can purchase one Souvenir for one Mora instead of the marked price.
+            </p>
+            </th>
+            <th>
+            <p id="char_desc">
+              When she arrives at an Inn, Klee receives one of
+              the available Meal cards at random for free.
+              Note: After seeing the Meal offered to her, she
+              can instead purchase a Meal as normal like
+              other players.
+            </p>
+            </th>
+            <th>
+              <p id="char_desc">
+                Each time she stops at the Statue, Barbara will donate 
+                one Mora and score one point. This is in
+                addition to the 1, 2, or 3 Mora she can personally
+                donate to the Temple.
+              </p>
+              </th>
+              <th>
+              <p id="char_desc">
+                When Aether arrives at each of the 3 intermediate Inns,
+                before the Meal he draws 1 Encounter 
+                card and applies its effect.
+              </p>
+              </th>
+        </tr>
+      </table>
     </div>
+
     <div id="player_card_display">
-      <span id="player1_card">
-        <p>Player 1: <span id="player1_name"></span></p>
-        <p><img src="./img/thumb/Character_Mona_Thumb.png" alt="Player1 thumbnail" height="64" width="64"></img></p>
-    </span>
-      <span id="player2_card">Player 2</span>
-      <span id="player3_card">Player 3</span>
-      <!-- <span id="player4_card">Player 4</span>
-      <span id="player5_card">Player 5</span> -->
+      <table>
+        <tr>
+          <th>
+            <p><span id="player1_color">Player 1</span></p>
+          </th>
+          <th>
+            <p><span id="player2_color">Player 2</span></p>
+          </th>
+          <th>
+            <p><span id="player3_color">Player 3</span></p>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <span id="player1_card">
+            <p><img id="P1P" src="./img/portrait/blank-profile-picture.png" alt="Player1 thumbnail" height="64" width="64"></img></p>
+            </span>
+          </th>
+          <th>
+            <span id="player2_card">
+            <p><img id="P2P" src="./img/portrait/blank-profile-picture.png" alt="Player2 thumbnail" height="64" width="64"></img></p>
+            </span>
+          </th>
+          <th>
+            <span id="player3_card">
+            <p><img id="P3P" src="./img/portrait/blank-profile-picture.png" alt="Player3 thumbnail" height="64" width="64"></img></p>
+            </span>
+          </th>
+        </tr>
+      </table>
     </div>
     <div id="player_error">
 

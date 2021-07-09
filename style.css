@@ -66,3 +66,9 @@ body{
 #background{
   background-image: url("/img/mondstadt_bg.jpg");
 }
+
+#char_desc{
+  text-align: center;
+  font-weight: normal;
+  width: 200px;
+}

@@ -69,3 +69,4 @@ let occupiedArray = [];
 
 let space = potentialSpace - 1;
 let event = spaceTypeArray[space];
+let game_started = false;

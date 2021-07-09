@@ -11,7 +11,7 @@ let numPlayer = 3;
 let PlayerStartArray = [...Array(numPlayer).keys()];
 let spaceTypeArray = ["Inn", "Souvenir", "Statue", "Visitor", "Field", "Cafe", "Mountain", "Mora", "Souvenir", "Statue", "Visitor", "Lake", "Mountain", "Cafe", "Inn", "Lake", "Statue", "Mora", "Field", "Mountain", "Visitor", "Statue", "Cafe", "Mountain", "Lake", "Souvenir", "Mora", "Inn", "Field", "Souvenir", "Visitor", "Mora", "Mountain", "Cafe", "Lake", "Field", "Statue", "Mora", "Visitor", "Lake", "Souvenir", "Inn", "Cafe", "Statue", "Visitor", "Souvenir", "Lake", "Mora", "Lake", "Visitor", "Mountain", "Field", "Lake", "Souvenir", "Inn"];
 let occupiedArray = new Array(52).fill(false);
-let initialTurnOrderArray;
+let initialTurnOrderArray = shuffle(PlayerStartArray);
 let charSelectionArray;
 let game_end = false; 
 let players_at_inn = false;
@@ -38,29 +38,46 @@ let mealArray = [
 
 let charArray = [
   {
-    "name": "Mona",
-    "num": 1,
-    "img": "./img/thumb/Character_Mona_Thumb.png"
-  },
-  {
     "name": "Albedo",
     "num": 2,
-    "img": "./img/thumb/Character_Albedo_Thumb.png"
+    "img": "./img/thumb/Character_Albedo_Thumb.png",
+    "mora": 5,
+    "chosen": false
   },
   {
-    "name": "Klee",
-    "num": 3,
-    "img": "./img/thumb/Character_Klee_Thumb.png"
+    "name": "Mona",
+    "num": 1,
+    "img": "./img/thumb/Character_Mona_Thumb.png",
+    "mora": 5,
+    "chosen": false
   },
   {
     "name": "Diluc",
     "num": 4,
-    "img": "./img/thumb/Character_Diluc_Thumb.png"
+    "img": "./img/thumb/Character_Diluc_Thumb.png",
+    "mora": 6,
+    "chosen": false
+  },
+  {
+    "name": "Klee",
+    "num": 3,
+    "img": "./img/thumb/Character_Klee_Thumb.png",
+    "mora": 2,
+    "chosen": false
   },
   {
     "name": "Barbara",
     "num": 5,
-    "img": "./img/thumb/Character_Barbara_Thumb.png"
+    "img": "./img/thumb/Character_Barbara_Thumb.png",
+    "mora": 8,
+    "chosen": false
+  },
+  {
+    "name": "Aether",
+    "num": 6,
+    "img": "./img/thumb/Character_Barbara_Thumb.png",
+    "mora": 4,
+    "chosen": false
   }
 ]
 
@@ -257,11 +274,18 @@ function playerCountSelection(){
 
 }
 
-function initializePlayerCount(){
+function initializeCharSelection(){
   charSelectionArray = shuffle(PlayerStartArray);
+  activeplayer["player_value"] = charSelectionArray[0];
+}
 
-  initialTurnOrderArray = shuffle(PlayerStartArray);
-  activeplayer["player_value"] = initialTurnOrderArray[0];
+function initializeGameStart(){
+  if(charSelectionArray.length == 0){
+    characterSelection = false;
+    // initialTurnOrderArray = shuffle(PlayerStartArray);
+    activeplayer["player_value"] = initialTurnOrderArray[0];
+  }
+  console.log(initialTurnOrderArray);
 }    
 
 function firstTurnOrder(){
@@ -347,22 +371,102 @@ function innMealEvent(){
 
 }
 
-function char_selection(){
+function char_selection(id){
+  let validChoice = true;
+  let char; 
+  switch(id) {
+    case "Albedo":
+      char = 0; 
+      break;
+    case "Mona":
+      char = 1; 
+      break;
+    case "Diluc":
+      char = 2; 
+      break;
+    case "Klee":
+      char = 3; 
+      break;
+    case "Barbara":
+      char = 4; 
+      break;
+    case "Aether":
+      char = 5; 
+      break;  
+    default:
+      // code block
+    }
+    if(charArray[char]["chosen"] == true){
+      validChoice = false;
+      alert("Character has been chosen!");
+    }
 
+  if(validChoice == true){
+      charArray[char]["chosen"] = true;
+      switch(activeplayer["player_value"]){
+          case 0:
+            player1["name"] = charArray[char]["name"];
+            player1["img"] = charArray[char]["img"];
+            player1["mora"] = charArray[char]["mora"];
+            document.getElementById("P1P").src= player1["img"];
+            break;
+          case 1:
+            player2["name"] = charArray[char]["name"];
+            player2["img"] = charArray[char]["img"];
+            player2["mora"] = charArray[char]["mora"];
+            document.getElementById("P2P").src= player2["img"];
+            break;
+          case 2:
+            player3["name"] = charArray[char]["name"];
+            player3["img"] = charArray[char]["img"];
+            player3["mora"] = charArray[char]["mora"];
+            document.getElementById("P3P").src= player3["img"];
+            break;
+          case 3:
+            player4["name"] = charArray[char]["name"];
+            player4["img"] = charArray[char]["img"];
+            player4["mora"] = charArray[char]["mora"];
+            document.getElementById("P4P").src= player4["img"];
+            break;
+          case 4:
+            player5["name"] = charArray[char]["name"];
+            player5["img"] = charArray[char]["img"];
+            player5["mora"] = charArray[char]["mora"];
+            document.getElementById("P5P").src= player5["img"];
+            break;  
+          }
+    charSelectionArray.shift();
+    if(charSelectionArray.length == 0){
+
+    } else{
+      activeplayer["player_value"] = charSelectionArray[0];
+      displayActivePlayer(activeplayer);
+    }
+  }
 }
 
   $(document).ready(function() {
-    initializePlayerCount(numPlayer);
+    // initializeGameStart(numPlayer);
+    initializeCharSelection();
     displayActivePlayer(activeplayer);
+    $(".char-card").click(function() {
+      if(characterSelection == true){
+        char_selection($(this).attr('id'));
+        initializeGameStart();
+      } 
+    });
     $(".board").click(function() {
+      if(characterSelection == true){
+
+      } else{
         checkSpace($(this).attr('id'));
         if(firstTurn == true){
           firstTurnOrder();
         } else {
-
           determineTurnOrder();
         }
         checkSpaceType($(this).attr('type'));
         displayActivePlayer(activeplayer);
-        });    
+        }    
+      });
 });
