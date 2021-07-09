@@ -4,18 +4,19 @@ let last_space;
 let activeplayer = {player_value: 0, space: 1};
 let lastplayer = {player_value: 0, space: 0};
 let startpoint = 1; 
+let board_length = 52;
 let innstops = [15, 25, 39, 52];
 let current_inn = innstops[0];
-let board_length = 52;
-let players_at_inn = false; 
 let numPlayer = 3; 
 let PlayerStartArray = [...Array(numPlayer).keys()];
 let spaceTypeArray = ["Inn", "Souvenir", "Statue", "Visitor", "Field", "Cafe", "Mountain", "Mora", "Souvenir", "Statue", "Visitor", "Lake", "Mountain", "Cafe", "Inn", "Lake", "Statue", "Mora", "Field", "Mountain", "Visitor", "Statue", "Cafe", "Mountain", "Lake", "Souvenir", "Mora", "Inn", "Field", "Souvenir", "Visitor", "Mora", "Mountain", "Cafe", "Lake", "Field", "Statue", "Mora", "Visitor", "Lake", "Souvenir", "Inn", "Cafe", "Statue", "Visitor", "Souvenir", "Lake", "Mora", "Lake", "Visitor", "Mountain", "Field", "Lake", "Souvenir", "Inn"];
+let occupiedArray = new Array(52).fill(false);
 let initialTurnOrderArray;
 let charSelectionArray;
 let game_end = false; 
-let occupiedArray = new Array(52).fill(false);
+let players_at_inn = false;
 let firstTurn = true;
+let characterSelection = true;
 let player1 = {name:"", img: "", point:0, mora:0,souvenir:[],Cafe_count:0,travelers:[], meals:[],field_art:0,mountain_art:0,lake_art:0, player_value:0,space:1, active:true};
 let player2 = {name:"", img: "", point:0, mora:0,souvenir:[],Cafe_count:0,travelers:[], meals:[],field_art:0,mountain_art:0,lake_art:0, player_value:1,space:1, active:true};
 let player3 = {name:"", img: "", point:0, mora:0,souvenir:[],Cafe_count:0,travelers:[], meals:[],field_art:0,mountain_art:0,lake_art:0, player_value:2,space:1, active:true};
@@ -35,6 +36,19 @@ let mealArray = [
   },
 ]
 
+let charArray = [
+  {
+    "name": "Mona",
+    "num": 1,
+    "img": "./img/thumb/Character_Mona_Thumb.png"
+  },
+  {
+    "name": "Albedo",
+    "num": 2,
+    "img": "./img/thumb/Character_Albedo_Thumb.png"
+  },
+
+]
 
 
 function getRndInteger(min, max) {
